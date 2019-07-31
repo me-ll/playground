@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<title>CSS Practice</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" lang="ja" xml:lang="ja" content="">
+<meta name="keywords" lang="ja" xml:lang="ja" content="">
+<link href="https://necolas.github.io/normalize.css/3.0.2/normalize.css" rel="stylesheet">
+<style>
+.gradation{ 
+    border-radius: 20px;
+    width: 90%;
+    height: 500px;
+    margin: 50px auto;
+    background: linear-gradient(35deg, #CCFFFF, #FFCCCC, rgb(204, 204, 255));
+  }
+.star{
+    margin: 100px;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid #f2c820;
+    display: block;
+    height: 0;
+    width: 0;
+    position: relative;
+    animation:
+        anim-star-fav-rotate 30s linear infinite,
+        anim-star-fav-opacity 1s linear infinite;
+}
+.star:before,
+.star:after {
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid #f2c820;
+    content: '';
+    display: block;
+    height: 0;
+    left: -100px;
+    position: absolute;
+    top: 0;
+    width: 0;
+}
+.star:before {
+    transform: rotate(71deg);
+}
+.star:after {
+    transform: rotate(-71deg);
+}
+.black_and_yellow{ 
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin:  50 auto;
+    background: repeating-linear-gradient(
+      45deg,
+      yellow 0px,
+      yellow 40px,
+      black 40px,
+      black 80px
+    );
+  }
+</style>
+</head>
+<body>
+
+        <div class="gradation">
+                <div class="star"></div>
+        </div>
+    
+        <div class="black_and_yellow"></div>
+
+</body>
+</html>
