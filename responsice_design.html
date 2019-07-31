@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Resposive Design</title>
+        <style>
+                * {
+                    box-sizing: border-box;
+                    margin: 0;
+                }
+                body {
+                    color:#4a4a60;
+                    font-family: 'Lato';
+                    text-align: justify;
+                }
+                p {
+                  font-size: 15px;
+                }
+                img {
+                    display: block;
+                    height: auto;
+                }
+                .header{
+                    width: 100%;
+                    background-color: #4296a5;
+                    color: #fff;
+                    font-size: 20px;
+                    font-weight: 800;
+                    padding: 5px;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    z-index: 10;
+                    border-bottom: #fff double;
+                }
+                .cat{
+                    width: 100%;
+                    position: relative;
+                    top: 40px;
+                }
+                .fullscreen {
+                    width: 100%;
+                    height: 50vh;
+                    padding: 5vh;
+                }
+                .one {
+                    background: #fff;
+                    color:#4a4a60;
+                }
+                .two {
+                    background: #4296a5;
+                    color:#fff;
+                }
+                .three {
+                    background: #fff;
+                    color:#4a4a60;
+                }
+                /*For PC*/
+                @media screen and (min-width:990px){
+                    p {
+                        font-size: 20px;
+                    }
+                    .cat{
+                        width: 40%;
+                        position: relative;
+                        top: 40px;
+                        margin: 0 auto;
+                    }
+                    .fullscreen {
+                        width: 100%;
+                        height: 80vh;
+                        padding: 10vh;
+                    }
+                }
+                /*For Tablet*/
+                /* @media screen and (min-width:768px){
+                } */
+                
+        </style>
+</head>
+<body>
+    <div class="header">header</div>
+
+
+    <div class="fullscreen one"><img class="cat" src="./images/cat.jpg" alt="Cute cat'"></div>
+
+    <div class="fullscreen two"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis tempus massa. Aenean erat nisl, gravida vel vestibulum cursus, interdum sit amet lectus. Sed sit amet quam nibh. Suspendisse quis tincidunt nulla. In hac habitasse platea dictumst. Ut sit amet pretium nisl. Vivamus vel mi sem. Aenean sit amet consectetur sem. Suspendisse pretium, purus et gravida consequat, nunc ligula ultricies diam, at aliquet velit libero a dui.</p></div>
+
+    <div class="fullscreen three"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis tempus massa. Aenean erat nisl, gravida vel vestibulum cursus, interdum sit amet lectus. Sed sit amet quam nibh. Suspendisse quis tincidunt nulla. In hac habitasse platea dictumst. Ut sit amet pretium nisl. Vivamus vel mi sem. Aenean sit amet consectetur sem. Suspendisse pretium, purus et gravida consequat, nunc ligula ultricies diam, at aliquet velit libero a dui.</p></div>
+
+</body>
+</html>
