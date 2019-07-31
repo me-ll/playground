@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<title>js_test</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" lang="ja" xml:lang="ja" content="">
+<meta name="keywords" lang="ja" xml:lang="ja" content="">
+<link href="https://necolas.github.io/normalize.css/3.0.2/normalize.css" rel="stylesheet">
+<style>
+</style>
+<script>
+    //Tips
+    //In japascript, it is used as global variable when it doesn't use var .. like this
+    global = "global test";
+    let glocal = "local test";
+
+    //Name space ... Need to study later..
+    var NS = {};
+    NS.msg = "nama space";
+    NS.arr = {test:"TEST"};
+
+    function click_fnc(get_id){
+
+     console.log(global);
+     //console.log(local); This gets an error because it is not defined
+     console.log(NS.msg);
+     console.log(NS.arr);
+
+    //The element that I click
+    let select_id = get_id; //All element
+    console.log(select_id);
+
+    let select_id2 = get_id.id; //Id name that I click
+    console.log(select_id2);
+
+
+    //Associative array
+    let fruit_arr = { apple:"りんご", banana:"バナナ", melon:"メロン", grape:"グレープ"}
+    // console.log(fruit_arr);
+
+    //How to get a value from this associative array
+    // console.log(fruit_arr.apple); //りんご
+    // console.log(fruit_arr['apple']); //りんご
+
+
+    //Get the value of this id
+    // var fruit = document.getElementById('fruit_id').innerText;
+    // console.log(fruit); //りんご
+    var fruit = document.getElementById(select_id2).innerText;
+    console.log(fruit);
+
+
+    //Checl the key if it exists
+    if(fruit in fruit_arr) { //Get the value from the key
+        // console.log("val");
+        document.getElementById(select_id2).innerText = fruit_arr[fruit];
+
+    }else{ //Want to get the key from the value..
+        // console.log("key");
+
+/* didn't work
+        let filter_val = fruit_arr.filter(function(fruit) {
+            return index;
+        });
+*/
+        let filter_val = Object.keys(fruit_arr).filter( (key) => {
+            return fruit_arr[key] === fruit;
+        });
+
+        // console.log(filter_val); //array
+        // console.log(filter_val[0]);
+
+        let fruit_en = filter_val[0];
+        document.getElementById(select_id2).innerText = fruit_en;
+
+    }
+
+
+    //Chenge the value of this id
+    //document.getElementById("fruit_id").innerText = 'te';
+    // document.getElementById("fruit_id").innerText = (fruit_arr.apple);
+    // document.getElementById("fruit_id").innerText = fruit_arr[fruit];
+    // document.getElementById(select_id2).innerText = fruit_arr[fruit];
+
+    }
+
+</script>
+</head>
+<body>
+    <p id="fruit_id" onclick="click_fnc(fruit_id);">apple</p>
+    <p id="fruit_id2" onclick="click_fnc(fruit_id2);">banana</p>
+<body>
+</html>
