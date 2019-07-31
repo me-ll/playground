@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Display</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" lang="ja" xml:lang="ja" content="">
+<meta name="keywords" lang="ja" xml:lang="ja" content="">
+<link href="https://necolas.github.io/normalize.css/3.0.2/normalize.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet"><!-- CSS for Bootstrap -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><!-- jQuery -->
+<script src="js/bootstrap.min.js"></script><!-- JS for Bootstrap -->
+<style>
+</style>
+<script>
+
+     function switchDisplay(){
+        radio = document.getElementsByName('which') 
+        if(radio[0].checked) {
+            document.getElementById('test1').style.display = "";
+            document.getElementById('test2').style.display = "none";
+        }else if(radio[1].checked) {
+            document.getElementById('test1').style.display = "none";
+            document.getElementById('test2').style.display = "";
+        }else if(radio[2].checked) {
+            document.getElementById('test1').style.display = "";
+            document.getElementById('test2').style.display = "";
+        }else if(radio[3].checked) {
+            document.getElementById('test1').style.display = "none";
+            document.getElementById('test2').style.display = "none";
+        }
+    }
+
+</script>
+</head>
+<body>
+
+    <form>
+
+        <label for="t_1">
+            <input id="t_1" type="radio" name="which" value="m" onclick="switchDisplay();">Display test1
+        </label>
+        <label for="t_2">
+            <input id="t_2" type="radio" name="which" value="d" onclick="switchDisplay();">Display test2
+        </label>
+        <label for="both">
+                <input id="both" type="radio" name="which" value="d" onclick="switchDisplay();">Display both
+        </label>
+        <label for="none">
+                <input id="none" type="radio" name="which" value="d" onclick="switchDisplay();">None
+        </label>
+
+        <div id="test1">test1</div>
+        <div id="test2">test2</div>
+
+    </form>
+<body>
+</html>
