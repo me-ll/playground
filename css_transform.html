@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<title>Transform</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" lang="ja" xml:lang="ja" content="">
+<meta name="keywords" lang="ja" xml:lang="ja" content="">
+<link href="https://necolas.github.io/normalize.css/3.0.2/normalize.css" rel="stylesheet">
+<style>
+ul{
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    background: linear-gradient(
+      53deg,
+      #fcffcc,
+      #ffcfff
+    );
+    padding: 10px 5%;
+  }
+  li{
+    padding: 10px;
+    font-size:15px;
+    color:#555;
+  }
+  li:hover{
+      transform: scale(1.2);
+  }
+
+  .test1 {
+    width: 70%;
+    height: 100px;
+    margin:  50px auto;
+    background: linear-gradient(
+      53deg,
+      #ccfffc,
+      #ffcccf
+    );
+  }
+  .test1:hover{
+    transform:scale(1.1);/* 1.1times */
+    transform: skewX(-24deg); /* X */
+  }
+
+  .test2 {
+    width: 70%;
+    height: 100px;
+    margin:  50px auto;
+    background: linear-gradient(
+      53deg,
+      #ffcccf,
+      #ccfffc
+    );
+  }
+  .test2:hover{
+    transform:scale(1.1);/* 1.1times */
+    transform: skewY(10deg); /* Y */
+  }
+
+</style>
+</head>
+<body>
+        <ul>
+                <li>list1</li>
+                <li>list2</li>
+                <li>list3</li>
+        </ul>
+
+        <div class="test1"></div>
+
+        <div class="test2"></div>
+
+
+</body>
+</html>
