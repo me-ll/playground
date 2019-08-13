@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<title>box-shadow</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" lang="ja" xml:lang="ja" content="">
+<meta name="keywords" lang="ja" xml:lang="ja" content="">
+<link href="https://necolas.github.io/normalize.css/3.0.2/normalize.css" rel="stylesheet">
+<style>
+    body{
+        padding:0 10%;
+        margin:  50px auto;
+        color:#969696;
+    }
+    p{
+        margin-bottom:10px;
+    }
+
+    .test1 {
+        width: 50%;
+        height: 50px;
+        background: linear-gradient(53deg,#ccfffc,#ffcccf);
+    }
+    .test1:hover{
+        box-shadow: 4px 10px; /* X:Right4px Y:Bottom10px*/
+    }
+
+    .test2 {
+        width: 50%;
+        height: 50px;
+        background: linear-gradient(53deg,#ffcccf,#fff6cc);
+    }
+    .test2:hover{
+        box-shadow: -4px -10px; /* X:Left4px Y:Top10px*/
+    }
+
+    /* These propaties are opitional */
+    .test3 {
+        width: 50%;
+        height: 50px;
+        background: linear-gradient(53deg,#fff6cc,#daffcc);
+    }
+    .test3:hover{
+        box-shadow: -4px -10px #eb7f7ffa; /* X:Left4px Y:Top10px Shadow color:Red */
+    }
+
+    .test4 {
+        width: 50%;
+        height: 50px;
+        background: linear-gradient(53deg,#daffcc,#ccfffb);
+    }
+    .test4:hover{
+        box-shadow: -4px -10px 15px #eb7f7ffa; /* X:Left4px Y:Top10px blur:15px Shadow color:Red */
+    }
+
+    .test5 {
+        width: 50%;
+        height: 50px;
+        background: linear-gradient(53deg,#ccfffb,#ccdeff);
+    }
+    .test5:hover{
+        box-shadow: 0 0 15px #eb7f7ffa; /* Symmetrical shadow */
+    }
+
+    .test6 {
+        width: 50%;
+        height: 50px;
+        background: linear-gradient(53deg,#ccdeff,#f5ccff);
+    }
+    .test6:hover{
+        box-shadow: 15px 15px 20px -10px #eb7f7ffa; /* X:Left15px Y:Top15px blur:20px Shadow Shadow size:-10px color:Red */
+    }
+
+    .test7 {
+        width: 50%;
+        height: 50px;
+        background: linear-gradient(53deg,#f5ccff,#ffcccc);
+    }
+    .test7:hover{
+        box-shadow: -15px -15px 20px -10px #eb7f7ffa inset; /* X:Left15px Y:Top15px blur:20px Shadow Shadow size:-10px color:Red Inner shadow */
+    }
+
+    button{
+        width: 150px;
+        color:#3a3737;
+        font-size:15px;
+        font-weight:bold;
+        background: #75b5ff;
+        padding:10px 15px;
+        margin: 10px auto;
+        box-shadow: 5px 5px #fafc11;
+        transition: .3s;
+    }
+    button:hover{
+        box-shadow: 1px 1px #fafc11;
+    }
+</style>
+</head>
+<body>
+
+        <h1>box-shadow</h1>
+
+        <p>X:Right 4px Y:Bottom 10px</p>
+        <div class="test1"></div>
+
+        <p>X:Left 4px Y:Top 10px</p>
+        <div class="test2"></div>
+
+        <p>Shadow color:Red</p>
+        <div class="test3"></div>
+
+        <p>blur:15px</p>
+        <div class="test4"></div>
+
+        <p>Symmetrical shadow</p>
+        <div class="test5"></div>
+
+        <p>Shadow Shadow size:-10px</p>
+        <div class="test6"></div>
+
+        <p>Inner shadow</p>
+        <div class="test7"></div>
+
+        <p>Button</p>
+        <button>Button :)</button>
+</body>
+</html>
