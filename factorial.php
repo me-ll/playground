@@ -4,7 +4,7 @@
 ・再帰関数（Recursive function）:
 関数の中で自身の関数を呼び出す。
 
-・階上計算（factorial） ex.3!
+・階乗計算（factorial） ex.3!
 1からある数までの連続する整数の積
 階乗は、正の整数に対して定義されていますので、(-2)! のような「負の数の階乗」や、
 1.5! のような「小数値の階乗」は定義されません。0!は後に順列や組合せに関連して、別途定義されます。
@@ -21,15 +21,15 @@ function factorial($n){
         return 1;
     }
 
-    echo $n.' ';
+    // echo $n.' ';
     return $n * factorial($n-1);
 }
 
-$num = 2;
-echo "\n".$num.': ';
+// $num = 2;
+// echo "\n".$num.': ';
 
-$sum = factorial($num);
-echo "= ".$sum;
+// $sum = factorial($num);
+// echo "= ".$sum;
 
 /*
 実行結果
