@@ -27,13 +27,24 @@ p:first-letter{
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #ccfffc;
+  background: linear-gradient(
+      45deg,
+      #f0cdea 0%,
+      #ccddff 20%,
+      #ccddff 40%,
+      #ccddff 80%
+    );
   height: 50px;
   width: 50px;
   transform: rotate(-45deg);
 }
 .heart::after {
-  background: linear-gradient(53deg,#ccfffc,#ffcccf);
+  background: linear-gradient(
+      45deg,
+      #ccddff 0%,
+      #ccddff 40%,
+      #f0cdea 80%
+    );
   content: "";
   border-radius: 50%;
   position: absolute;
@@ -44,7 +55,12 @@ p:first-letter{
 }
 .heart::before {
   content: "";
-  background: linear-gradient(53deg,#ccfffc,#ffcccf);
+  background: linear-gradient(
+      45deg,
+      #ccddff 0%,
+      #ccddff 40%,
+      #f0cdea 80%
+    );
   border-radius: 50%;
   position: absolute;
   width: 50px;
